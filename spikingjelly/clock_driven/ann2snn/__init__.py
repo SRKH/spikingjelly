@@ -105,8 +105,8 @@ class parser:
             model = pytorch_kernel.rate_normalization(model, data)#, **self.config['normalization']
 
         self.ann_filename = os.path.join(self.config['log_dir'], model_name + ".pth")
-        torch.save(model, os.path.join(self.config['log_dir'], "debug.pth"))
-        torch.save(model, self.ann_filename)
+        #torch.save(model, os.path.join(self.config['log_dir'], "debug.pth"))
+        #torch.save(model, self.ann_filename)
         model = self.to_snn(model)
         return model
 
