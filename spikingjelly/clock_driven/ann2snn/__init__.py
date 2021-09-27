@@ -448,6 +448,7 @@ class classify_simulator(simulator):  # 一个分类任务的实例
             try:
                 if kargs['step_max']:
                     y = self.global_shared['acc'] * 100
+                    print(y)
                     argmax = np.argmax(y)
                     disp_bias = 0.3 * float(T) if x[argmax] / T > 0.7 else 0
                     self.ax.text(x[argmax] - 0.8 - disp_bias, y[argmax] + 0.8, "MAX:%.3f%% T=%d" % (y[argmax], x[argmax]),
